@@ -59,7 +59,7 @@ class MessageBuilder {
             return Types.NULL.toString();
         }
         else {
-            Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
+            Gson gson = new GsonBuilder().serializeNulls().enableComplexMapKeySerialization().create();
             return Types.OBJECT.toString() + gson.toJson( value );
         }
     }
